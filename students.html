@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namjodi-abc Secondary School - Student Life</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+}
+.page-wrapper {
+    display: flex;
+    max-width: 1100px;
+    width: 95%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 180px;
+    background: indigo;
+    color: white;
+    padding: 15px 8px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0; 
+    bottom: 0;
+    left: calc(50% - 550px);
+    overflow-y: auto;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+    z-index: 5;
+}
+#sidebar img.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+#sidebar h2 {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+#sidebar p.motto {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+#sidebar ul { list-style: none; padding: 0; margin: 0; }
+#sidebar ul li { margin: 2px 0; }
+#sidebar ul li a {
+    color: white; text-decoration: none; font-weight: bold;
+    display: block; padding: 6px; border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+#sidebar ul li a:hover, #sidebar ul li a.active { background: #444; }
+
+/* Main Content */
+.main-content {
+    margin-left: 200px; 
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-bottom: 80px; /* ensure space above footer */
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: indigo;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+.section {
+    background: #f0f8ff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+.section h3 {
+    color: #4B0082;
+    margin-bottom: 10px;
+}
+.section p, .section ul {
+    color: #333;
+    line-height: 1.6;
+}
+.section img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    display: block;
+    margin: 15px auto;
+}
+
+/* Links */
+.section a.result-link {
+    display: inline-block;
+    background: indigo;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+.section a.result-link:hover {
+    background: #4B0082;
+}
+
+/* Footer */
+footer {
+    background: cadetBlue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1100px; /* matches page-wrapper width */
+    border-radius: 0 0 12px 12px;
+    z-index: 10; /* ensure footer comes above sidebar */
+}
+footer p { margin: 4px 0; }
+footer a { color: yellow; text-decoration: none; font-weight: bold; }
+
+/* Responsive */
+@media(max-width: 900px){
+    #sidebar {
+        position: relative;
+        left: 0;
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    footer {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <img src="images/school-logo.png" alt="School Logo" class="logo">
+        <h2>Namjodi-abc</h2>
+        <p class="motto">"Excellence Through Knowledge and Character"</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="students.html" class="active">Student Life</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+           
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="page-header">Student Life</h1>
+
+        <div class="section">
+            <h3>School Clubs & Societies</h3>
+            <p>Students actively participate in clubs such as Science Club, Debate Society, Drama, and Music Club. These clubs encourage leadership, teamwork, and creativity.</p>
+            <img src="images/student-club.jpg" alt="Student Clubs">
+        </div>
+
+        <div class="section">
+            <h3>Excursions & Trips</h3>
+            <p>Our students and teachers often travel for educational trips, cultural exchanges, and sports events. For example, students visited Lilongwe National Park to study wildlife conservation.</p>
+            <img src="images/school-trip.jpg" alt="School Trip">
+        </div>
+
+        <div class="section">
+            <h3>Visitor Highlights</h3>
+            <p>Visitors from Govan School, Scotland, visited Namjodi-abc Secondary School. They donated stationeries and contributed fees for some students, enhancing learning opportunities for all.</p>
+            <img src="images/visitor.jpg" alt="Visitors from Scotland">
+        </div>
+
+        <div class="section">
+            <h3>Sports & Competitions</h3>
+            <p>Students engage in football, netball, athletics, and inter-school competitions. Sports participation develops teamwork, discipline, and a healthy lifestyle.</p>
+            <img src="images/sports.jpg" alt="Sports Activities">
+        </div>
+
+        <div class="section">
+            <h3>Cultural & Extracurricular Activities</h3>
+            <p>Namjodi-abc students take part in drama, music, debate, and art competitions. These activities enhance creativity, self-expression, and critical thinking.</p>
+            <img src="images/cultural.jpg" alt="Cultural Activities">
+        </div>
+
+        <div class="section">
+            <h3>Community Service</h3>
+            <p>Students engage in community service programs like environmental cleanups, mentoring younger students, and local charity initiatives. These programs build social responsibility and empathy.</p>
+            <img src="images/community.jpg" alt="Community Service">
+        </div>
+
+        <div class="section">
+            <h3>Highlights</h3>
+            <ul>
+                <li>Students excel in academics and extracurricular competitions.</li>
+                <li>Exchange programs and educational trips.</li>
+                <li>Active participation in community service projects.</li>
+                <li>Visitors and donors contributing to student welfare.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>View Results</h3>
+            <a href="https://sites.google.com/view/namjodi-abc/students/" class="result-link">View Student Results</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Namjodi-abc Secondary School | Designed with ❤️ by Mnzathu | 📍 Thyolo, Malawi | 📞 +265 993 816 460 | ✉ namjodiabcshed@gmail.com</p>
+    <p>
+        <a href="https://wa.me/265888954444" target="_blank">WhatsApp</a> |
+        <a href="https://facebook.com/namjodiabcschool" target="_blank">Facebook</a> |
+        <a href="mailto:namjodiabcshed@gmail.com">Email</a>
+    </p>
+</footer>
+
+</body>
+</html>

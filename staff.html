@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namjodi-abc Secondary School - Staff</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.page-wrapper {
+    display: flex;
+    max-width: 1100px;
+    width: 95%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+/* Sidebar */
+#sidebar {
+    width: 180px;
+    background: indigo;
+    color: white;
+    padding: 15px 8px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0; 
+    bottom: 0;
+    left: calc(50% - 550px);
+    overflow-y: auto;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+    z-index: 5;
+}
+#sidebar img.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+#sidebar h2 {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+#sidebar p.motto {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+#sidebar ul { list-style: none; padding: 0; margin: 0; }
+#sidebar ul li { margin: 2px 0; }
+#sidebar ul li a {
+    color: white; text-decoration: none; font-weight: bold;
+    display: block; padding: 6px; border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+#sidebar ul li a:hover { background: #444; }
+
+/* Main Content */
+.main-content {
+    margin-left: 200px; flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: indigo;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+.section {
+    background: #f0f8ff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+.section h3 {
+    color: #4B0082;
+    margin-bottom: 10px;
+}
+.section p, .section ul {
+    color: #333;
+    line-height: 1.6;
+}
+.section img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    display: block;
+    margin: 15px auto;
+}
+
+/* Links List */
+.links-list { list-style: disc; padding-left: 20px; }
+.links-list li { margin-bottom: 8px; }
+
+/* Password Overlay */
+#passwordOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7); /* translucent overlay */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+#passwordOverlay input {
+    padding: 10px;
+    margin-top: 10px;
+    width: 220px;
+    border-radius: 6px;
+    border: none;
+}
+#passwordOverlay button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: indigo;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: cadetBlue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1100px; /* matches page-wrapper width */
+    border-radius: 0 0 12px 12px;
+    z-index: 10; /* ensure footer comes above sidebar */
+}
+footer p { margin: 4px 0; }
+footer a { color: yellow; text-decoration: none; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div id="passwordOverlay">
+    <h2>Enter pass key to view Staff page</h2>
+    <input type="password" id="passwordInput" placeholder="Enter pass key">
+    <button onclick="checkPassword()">Submit</button>
+</div>
+
+<div class="page-wrapper" id="contentWrapper" style="display:none;">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <img src="images/school-logo.png" alt="School Logo" class="logo">
+        <h2>Namjodi-abc</h2>
+        <p class="motto">"Excellence Through Knowledge and Character"</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="students.html">Student Life</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="page-header">Staff</h1>
+
+        <div class="section">
+            <h3>Teacher Stories & Announcements</h3>
+            <img src="images/teacher1.jpg" alt="Teacher Story">
+            <p>Mr. Chikondi organized a science fair for students that attracted local media attention. Students presented innovative projects and demonstrated practical skills.</p>
+            <img src="images/teacher2.jpg" alt="Teacher Story">
+            <p>Ms. Grace led a student exchange program to a nearby school, promoting leadership and collaboration among learners.</p>
+        </div>
+
+        <div class="section">
+            <h3>Staff Links</h3>
+            <ul class="links-list">
+                <li><a href="https://sites.google.com/view/namjodi-abc/media/assessments">Mnzathu EduReport</a></li>
+                <li><a href="view-data.html">View School Data</a></li>
+                <li><a href="download-timetable.html">Download Timetable</a></li>
+                <li><a href="download-calendar.html">Download Calendar of Events</a></li>
+                <li><a href="download-duty-roster.html">Download Duty Roster</a></li>
+            </ul>
+        </div>
+
+         <div class="section">
+           <h3>View Student Results</h3>
+             <ul class="links-list">
+               <li><a href="results-term1.html">Term 1 Results</a></li>
+               <li><a href="results-term2.html">Term 2 Results</a></li>
+               <li><a href="results-term3.html">Term 3 Results</a></li>
+               <li><a href="results-jce.html">JCE Results</a></li>
+               <li><a href="results-msce.html">MSCE Results</a></li>
+            </ul>
+         </div>
+
+
+        <div class="section">
+            <h3>Syllabus Downloads</h3>
+            <ul class="links-list">
+                <li><a href="syllabus/junior/english.pdf">English (Junior)</a></li>
+                <li><a href="syllabus/senior/english.pdf">English (Senior)</a></li>
+                <li><a href="syllabus/junior/agriculture.pdf">Agriculture (Junior)</a></li>
+                <li><a href="syllabus/senior/agriculture.pdf">Agriculture (Senior)</a></li>
+                <li><a href="syllabus/junior/biology.pdf">Biology (Junior)</a></li>
+                <li><a href="syllabus/senior/biology.pdf">Biology (Senior)</a></li>
+                <li><a href="syllabus/junior/bible-knowledge.pdf">Bible Knowledge (Junior)</a></li>
+                <li><a href="syllabus/senior/bible-knowledge.pdf">Bible Knowledge (Senior)</a></li>
+                <li><a href="syllabus/junior/chemistry.pdf">Chemistry (Junior)</a></li>
+                <li><a href="syllabus/senior/chemistry.pdf">Chemistry (Senior)</a></li>
+                <li><a href="syllabus/junior/chichewa.pdf">Chichewa (Junior)</a></li>
+                <li><a href="syllabus/senior/chichewa.pdf">Chichewa (Senior)</a></li>
+                <li><a href="syllabus/junior/geography.pdf">Geography (Junior)</a></li>
+                <li><a href="syllabus/senior/geography.pdf">Geography (Senior)</a></li>
+                <li><a href="syllabus/junior/history.pdf">History (Junior)</a></li>
+                <li><a href="syllabus/senior/history.pdf">History (Senior)</a></li>
+                <li><a href="syllabus/junior/mathematics.pdf">Mathematics (Junior)</a></li>
+                <li><a href="syllabus/senior/mathematics.pdf">Mathematics (Senior)</a></li>
+                <li><a href="syllabus/junior/life-skills.pdf">Life Skills (Junior)</a></li>
+                <li><a href="syllabus/senior/social-life-skills.pdf">Social & Life Skills (Senior)</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Namjodi-abc Secondary School | Designed with ❤️ by Mnzathu | 📍 Thyolo, Malawi | 📞 +265 993 816 460 | ✉ namjodiabcshed@gmail.com</p>
+    <p>
+        <a href="https://wa.me/265888954444" target="_blank">WhatsApp</a> |
+        <a href="https://facebook.com/namjodiabcschool" target="_blank">Facebook</a> |
+        <a href="mailto:namjodiabcshed@gmail.com">Email</a>
+    </p>
+</footer>
+
+<script>
+function checkPassword() {
+    var input = document.getElementById('passwordInput').value.trim().toLowerCase();
+    if(input === 'abc is good') {
+        document.getElementById('passwordOverlay').style.display = 'none';
+        document.getElementById('contentWrapper').style.display = 'flex';
+    } else {
+        alert('Incorrect pass key.');
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namjodi-abc Secondary School - Academics</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Page Wrapper */
+.page-wrapper {
+    display: flex;
+    max-width: 1100px;
+    width: 95%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 180px;
+    background: indigo;
+    color: white;
+    padding: 15px 8px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 550px);
+    overflow-y: auto;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+}
+#sidebar img.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+#sidebar h2 {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+#sidebar p.motto {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+#sidebar ul { list-style: none; padding: 0; margin: 0; }
+#sidebar ul li { margin: 2px 0; } /* Reduced vertical space */
+#sidebar ul li a {
+    color: white; text-decoration: none; font-weight: bold;
+    display: block; padding: 2px 6px; border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+#sidebar ul li a:hover { background: #444; }
+
+/* Main Content */
+.main-content {
+    margin-left: 200px; 
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Page Heading */
+.page-heading {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #4B0082, #6A5ACD, #9370DB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Section Styling */
+.section {
+    background: #f0f8ff; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    border-left: 6px solid #6A5ACD; 
+}
+.section h3 {
+    color: #4B0082;
+    margin-bottom: 10px;
+}
+.section p, .section ul {
+    color: #333;
+    line-height: 1.6;
+}
+.section img { width: 100%; max-width: 500px; border-radius: 12px; display: block; margin: 15px auto; }
+
+/* Download Buttons */
+.download-btn {
+    display: inline-block;
+    background: indigo;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+.download-btn:hover {
+    background: #4B0082;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: cadetBlue; color: white; text-align: center;
+    padding: 10px 0; font-size: 14px;
+    position: fixed; bottom: 0; left: 50%;
+    transform: translateX(-50%); width: 1100px;
+    border-radius: 0 0 12px 12px;
+}
+footer p { margin: 4px 0; }
+footer a { color: yellow; text-decoration: none; font-weight: bold; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    #sidebar { position: relative; width: 100%; border-radius: 12px 12px 0 0; left: 0; top: 0; }
+    .main-content { margin-left: 0; padding: 15px; }
+    footer { width: 95%; }
+    .section { padding: 15px; }
+    .page-heading { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <img src="images/school-logo.png" alt="School Logo" class="logo">
+        <h2>Namjodi-abc</h2>
+        <p class="motto">"Excellence Through Knowledge and Character"</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="students.html">Student Life</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+           
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="page-heading">Academics</h1>
+
+        <div class="section">
+            <h3>Curriculum & Subjects</h3>
+            <p>Namjodi-abc Secondary School follows the government-approved secondary school curriculum. Students study core subjects including English, Mathematics, Science, Chichewa, History, Geography, Business Studies, Computer Studies, and other electives according to their stream and level.</p>
+        </div>
+
+        <div class="section">
+            <h3>Teaching & Learning</h3>
+            <p>The school emphasizes interactive and practical learning. Laboratories, ICT rooms, libraries, and teaching aids are used to ensure students understand concepts effectively and develop critical thinking skills.</p>
+            <img src="images/science-lab.jpg" alt="Science Lab">
+        </div>
+
+        <div class="section">
+            <h3>Co-curricular Activities</h3>
+            <p>Academic growth is complemented by co-curricular activities. Students participate in debates, clubs, drama, sports, music, and community service projects that develop leadership, teamwork, and creativity.</p>
+        </div>
+
+        <div class="section">
+            <h3>Achievements</h3>
+            <p>The school consistently achieves high academic results. Students have won awards in regional and national competitions in science, mathematics, sports, and cultural events.</p>
+            <img src="images/achievements.jpg" alt="Achievements">
+        </div>
+
+        <div class="section">
+            <h3>Downloadable Resources</h3>
+            <p>Students and parents can download important academic materials, including timetables, syllabus, and other school resources for each term.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 10px;">
+                <a href="downloads/timetable_term1.pdf" target="_blank" class="download-btn">Term 1 Timetable</a>
+                <a href="downloads/timetable_term2.pdf" target="_blank" class="download-btn">Term 2 Timetable</a>
+                <a href="downloads/timetable_term3.pdf" target="_blank" class="download-btn">Term 3 Timetable</a>
+                <a href="downloads/syllabus.pdf" target="_blank" class="download-btn">Syllabus</a>
+                <a href="downloads/academic-calendar.pdf" target="_blank" class="download-btn">Academic Calendar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Namjodi-abc Secondary School | Designed with ❤️ by Mnzathu | 📍 Thyolo, Malawi | 📞 +265 993 816 460 | ✉ namjodiabcshed@gmail.com</p>
+    <p>
+        <a href="https://wa.me/265888954444" target="_blank">WhatsApp</a> |
+        <a href="https://facebook.com/namjodiabcschool" target="_blank">Facebook</a> |
+        <a href="mailto:namjodiabcshed@gmail.com">Email</a>
+    </p>
+</footer>
+
+</body>
+</html>

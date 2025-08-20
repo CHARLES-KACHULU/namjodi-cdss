@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namjodi-abc Secondary School - Gallery</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+}
+.page-wrapper {
+    display: flex;
+    max-width: 1100px;
+    width: 95%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    position: relative;
+    flex-direction: column;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 180px;
+    background: indigo;
+    color: white;
+    padding: 15px 8px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0; 
+    bottom: 0;
+    left: calc(50% - 550px);
+    overflow-y: auto;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+    z-index: 1; /* Lower than footer */
+}
+#sidebar img.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+#sidebar h2 {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+#sidebar p.motto {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+#sidebar ul { list-style: none; padding: 0; margin: 0; }
+#sidebar ul li { margin: 2px 0; }
+#sidebar ul li a {
+    color: white; text-decoration: none; font-weight: bold;
+    display: block; padding: 6px; border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+#sidebar ul li a:hover, #sidebar ul li a.active { background: #444; }
+
+/* Main Content */
+.main-content {
+    margin-left: 200px; 
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-bottom: 80px; /* space above footer */
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: indigo;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+.section {
+    background: #f0f8ff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+.section h3 {
+    color: #4B0082;
+    margin-bottom: 10px;
+}
+.section p, .section ul {
+    color: #333;
+    line-height: 1.6;
+}
+.section img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+}
+
+/* Section Links */
+.section a.section-link {
+    display: inline-block;
+    background: indigo;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.section a.section-link:hover { background: #4B0082; }
+
+/* Footer */
+footer {
+    background: cadetBlue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1100px; /* matches page-wrapper */
+    border-radius: 0 0 12px 12px;
+    z-index: 10; /* Above sidebar */
+}
+footer p { margin: 4px 0; }
+footer a { color: yellow; text-decoration: none; font-weight: bold; }
+
+/* Responsive */
+@media(max-width: 900px){
+    #sidebar {
+        position: relative;
+        left: 0;
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    footer {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <img src="images/school-logo.png" alt="School Logo" class="logo">
+        <h2>Namjodi-abc</h2>
+        <p class="motto">"Excellence Through Knowledge and Character"</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="students.html">Student Life</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+           
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="page-header">Gallery</h1>
+
+        <!-- Student Life Section -->
+        <div class="section">
+            <h3>Student Life</h3>
+            <p>Exciting moments from student activities, clubs, and events.</p>
+            <img src="images/student1.jpg" alt="Student Life 1">
+            <img src="images/student2.jpg" alt="Student Life 2">
+            <img src="images/student3.jpg" alt="Student Life 3">
+            <img src="images/student4.jpg" alt="Student Life 4">
+            <br>
+            <a href="students.html" class="section-link">Read More</a>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="section">
+            <h3>Achievements</h3>
+            <p>Celebrating awards, academic excellence, and sports victories.</p>
+            <img src="images/achieve1.jpg" alt="Achievement 1">
+            <img src="images/achieve2.jpg" alt="Achievement 2">
+            <img src="images/achieve3.jpg" alt="Achievement 3">
+            <img src="images/achieve4.jpg" alt="Achievement 4">
+            <br>
+            <a href="achievements.html" class="section-link">Read More</a>
+        </div>
+
+        <!-- Staff Section -->
+        <div class="section">
+            <h3>Staff</h3>
+            <p>Meet our teachers and staff who support student growth.</p>
+            <img src="images/staff1.jpg" alt="Staff 1">
+            <img src="images/staff2.jpg" alt="Staff 2">
+            <img src="images/staff3.jpg" alt="Staff 3">
+            <img src="images/staff4.jpg" alt="Staff 4">
+            <br>
+            <a href="staff.html" class="section-link">Read More</a>
+        </div>
+
+        <!-- Sports Section -->
+        <div class="section">
+            <h3>Sports</h3>
+            <p>Students actively participating in various sports activities.</p>
+            <img src="images/sport1.jpg" alt="Sports 1">
+            <img src="images/sport2.jpg" alt="Sports 2">
+            <img src="images/sport3.jpg" alt="Sports 3">
+            <img src="images/sport4.jpg" alt="Sports 4">
+            <br>
+            <a href="sports.html" class="section-link">Read More</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    <p>© 2025 Namjodi-abc Secondary School | Designed with ❤️ by Mnzathu | 📍 Thyolo, Malawi | 📞 +265 993 816 460 | ✉ namjodiabcshed@gmail.com</p>
+    <p>
+        <a href="https://wa.me/265888954444" target="_blank">WhatsApp</a> |
+        <a href="https://facebook.com/namjodiabcschool" target="_blank">Facebook</a> |
+        <a href="mailto:namjodiabcshed@gmail.com">Email</a>
+    </p>
+</footer>
+</div>
+
+</body>
+</html>

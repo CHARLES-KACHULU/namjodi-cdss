@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namjodi-abc Secondary School - Departments</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Page Wrapper */
+.page-wrapper {
+    display: flex;
+    max-width: 1100px;
+    width: 95%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 180px;
+    background: indigo;
+    color: white;
+    padding: 15px 8px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 550px);
+    overflow-y: auto;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+}
+#sidebar img.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+#sidebar h2 {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+#sidebar p.motto {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+#sidebar ul { list-style: none; padding: 0; margin: 0; }
+#sidebar ul li { margin: 2px 0; }
+#sidebar ul li a {
+    color: white; text-decoration: none; font-weight: bold;
+    display: block; padding: 2px 6px; border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+#sidebar ul li a:hover { background: #444; }
+
+/* Main Content */
+.main-content {
+    margin-left: 200px; 
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Page Heading */
+.page-heading {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #4B0082, #6A5ACD, #9370DB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Section Styling */
+.section {
+    background: #f0f8ff; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    border-left: 6px solid #6A5ACD; 
+}
+.section h3 {
+    color: #4B0082;
+    margin-bottom: 10px;
+}
+.section p, .section ul {
+    color: #333;
+    line-height: 1.6;
+}
+.section img { width: 100%; max-width: 500px; border-radius: 12px; display: block; margin: 15px auto; }
+
+/* Footer */
+footer {
+    background: cadetBlue; color: white; text-align: center;
+    padding: 10px 0; font-size: 14px;
+    position: fixed; bottom: 0; left: 50%;
+    transform: translateX(-50%); width: 1100px;
+    border-radius: 0 0 12px 12px;
+}
+footer p { margin: 4px 0; }
+footer a { color: yellow; text-decoration: none; font-weight: bold; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    #sidebar { position: relative; width: 100%; border-radius: 12px 12px 0 0; left: 0; top: 0; }
+    .main-content { margin-left: 0; padding: 15px; }
+    footer { width: 95%; }
+    .section { padding: 15px; }
+    .page-heading { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <img src="images/school-logo.png" alt="School Logo" class="logo">
+        <h2>Namjodi-abc</h2>
+        <p class="motto">"Excellence Through Knowledge and Character"</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="students.html">Student Life</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="page-heading">Departments</h1>
+
+        <div class="section">
+            <h3>Science Department</h3>
+            <p>The Science Department includes Biology, Chemistry, Physics, and Computer Studies. Students are engaged in practical experiments, laboratory work, and ICT integration to enhance understanding of scientific principles.</p>
+            <img src="images/science-dept.jpg" alt="Science Department">
+        </div>
+
+        <div class="section">
+            <h3>Mathematics Department</h3>
+            <p>Our Mathematics Department focuses on problem-solving, analytical thinking, and preparing students for national examinations and competitions. Innovative teaching methods and group activities are encouraged.</p>
+            <img src="images/math-dept.jpg" alt="Mathematics Department">
+        </div>
+
+        <div class="section">
+            <h3>Languages Department</h3>
+            <p>The Languages Department covers English, Chichewa, and other languages. Emphasis is placed on communication skills, literature appreciation, writing, and reading comprehension.</p>
+        </div>
+
+        <div class="section">
+            <h3>Humanities Department</h3>
+            <p>This department includes History, Geography, and Social Life Skills. Students explore cultural, social, and environmental topics while developing critical thinking and civic responsibility.</p>
+        </div>
+
+        <div class="section">
+            <h3>Business & Arts Department</h3>
+            <p>Includes Business Studies, Art, and Music. Students develop entrepreneurial skills, creative talents, and participate in events that showcase innovation and artistic expression.</p>
+        </div>
+
+        <div class="section">
+            <h3>Co-curricular Activities</h3>
+            <p>Departments organize various competitions, exhibitions, field trips, and community projects to supplement classroom learning and enhance students' holistic development.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Namjodi-abc Secondary School | Designed with ❤️ by Mnzathu | 📍 Thyolo, Malawi | 📞 +265 993 816 460 | ✉ namjodiabcshed@gmail.com</p>
+    <p>
+        <a href="https://wa.me/265888954444" target="_blank">WhatsApp</a> |
+        <a href="https://facebook.com/namjodiabcschool" target="_blank">Facebook</a> |
+        <a href="mailto:namjodiabcshed@gmail.com">Email</a>
+    </p>
+</footer>
+
+</body>
+</html>

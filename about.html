@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namjodi-abc Secondary School - About Us</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    min-height: 100vh;
+}
+.page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    width: 95%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+#sidebar {
+    width: 180px;
+    background: indigo;
+    color: white;
+    padding: 15px 8px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-550px);
+    height: 100vh;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+    overflow-y: auto;
+}
+#sidebar img.logo { width: 90px; height: 90px; border-radius: 50%; margin-bottom: 10px; border: 2px solid white; }
+#sidebar h2 { font-size: 1rem; margin: 5px 0; }
+#sidebar p.motto { font-size: 0.8rem; font-style: italic; margin-bottom: 10px; color: #ddd; }
+#sidebar ul { list-style: none; padding: 0; margin: 0; }
+#sidebar ul li { margin: 2px 0; }
+#sidebar ul li a {
+    color: white; text-decoration: none; font-weight: bold;
+    display: block; padding: 6px; border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+#sidebar ul li a:hover { background: #444; }
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 200px; /* space for fixed sidebar */
+}
+
+/* School Title */
+.school-title {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #4B0082, #6A5ACD, #9370DB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Section Styling */
+.section {
+    background: #f9f9ff; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    border-left: 6px solid #6A5ACD; 
+}
+.section h3 { color: #4B0082; margin-bottom: 15px; }
+.section p, .section li { color: #333; line-height: 1.6; }
+.section img { width: 100%; max-width: 500px; border-radius: 12px; display: block; margin: 15px auto; }
+
+/* Two-column layout */
+.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.column { flex: 1 1 45%; }
+
+/* Footer */
+footer {
+    background: cadetBlue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1100px;
+    border-radius: 0 0 12px 12px;
+}
+footer p { margin: 4px 0; }
+footer a { color: yellow; text-decoration: none; font-weight: bold; }
+
+/* Responsive */
+@media(max-width: 900px){
+    #sidebar {
+        position: relative;
+        transform: none;
+        width: 100%;
+        height: auto;
+        border-radius: 12px 12px 0 0;
+    }
+    .main-content { margin-left: 0; }
+    .two-columns { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <img src="images/school-logo.png" alt="School Logo" class="logo">
+        <h2>Namjodi-abc</h2>
+        <p class="motto">"Excellence Through Knowledge and Character"</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="students.html">Student Life</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="school-title">Namjodi-abc Secondary School</h1>
+
+        <!-- About Section -->
+        <div class="section">
+            <h3>About Us</h3>
+            <div class="two-columns">
+                <div class="column">
+                    <p>Namjodi-abc Secondary School is a government institution located in Lilongwe, Malawi. Students are admitted through government selection. The school emphasizes both academic excellence and character development, ensuring that students are prepared for higher education and responsible citizenship.</p>
+                    <p>The teaching staff is dedicated to nurturing students’ talents, ethical values, leadership, and social skills. Holistic growth is encouraged through sports, arts, debates, and cultural programs.</p>
+                </div>
+                <div class="column">
+                    <p>The school has well-equipped classrooms, laboratories, a computer lab, library, and sports fields. Co-curricular activities, mentorship programs, and educational trips provide students with exposure beyond the classroom.</p>
+                    <img src="images/school-campus.jpg" alt="School Campus">
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Values Section -->
+        <div class="section">
+            <h3>Core Values</h3>
+            <ul>
+                <li>Integrity and Honesty</li>
+                <li>Academic Excellence</li>
+                <li>Discipline and Respect</li>
+                <li>Teamwork and Leadership</li>
+                <li>Community Service</li>
+            </ul>
+        </div>
+
+        <!-- History Section -->
+        <div class="section">
+            <h3>History</h3>
+            <p>Established in the early 1980s, Namjodi-abc Secondary School has grown to become one of the leading government schools in the region. Our alumni have excelled in various professions and continue to contribute positively to society.</p>
+        </div>
+
+        <!-- Facilities Section -->
+        <div class="section">
+            <h3>Facilities</h3>
+            <ul>
+                <li>Science laboratories</li>
+                <li>Computer lab</li>
+                <li>Library</li>
+                <li>Sports fields</li>
+                <li>Hostels</li>
+                <li>Music and arts rooms</li>
+            </ul>
+        </div>
+
+        <!-- Activities & Achievements Section -->
+        <div class="section">
+            <h3>Activities & Achievements</h3>
+            <ul>
+                <li>Sports tournaments and competitions</li>
+                <li>Debates, quizzes, and cultural events</li>
+                <li>Community outreach and environmental initiatives</li>
+                <li>Student mentorship and leadership programs</li>
+                <li>Excellence awards in academics and co-curriculars</li>
+            </ul>
+            <img src="images/student-activities.jpg" alt="Student Activities">
+        </div>
+
+        <!-- Visitors & Community Engagement Section -->
+        <div class="section">
+            <h3>Visitors & Community Engagement</h3>
+            <p>Namjodi-abc has hosted several local and international visitors. For example, students and staff from Govan School in Scotland visited our school, donated stationeries, and supported the education of selected students.</p>
+            <p>Students and teachers have also traveled to participate in educational programs and cultural exchange activities. Community partnerships are actively encouraged to enhance the learning experience.</p>
+            <img src="images/visitor-stories.jpg" alt="Visitor Stories">
+        </div>
+
+        <!-- Co-Curricular Programs Section -->
+        <div class="section">
+            <h3>Co-Curricular Programs</h3>
+            <ul>
+                <li>Sports: football, volleyball, athletics</li>
+                <li>Clubs: science, debate, drama, music</li>
+                <li>Arts & Cultural festivals</li>
+                <li>Community service and volunteer projects</li>
+                <li>Educational trips and excursions</li>
+            </ul>
+            <img src="images/co-curricular.jpg" alt="Co-Curricular Activities">
+        </div>
+
+        <!-- Gallery Section Placeholder -->
+        <div class="section">
+            <h3>Gallery</h3>
+            <p>Showcase images of school events, activities, and achievements here.</p>
+            <div class="two-columns">
+                <div class="column"><img src="images/gallery1.jpg" alt="Gallery Image 1"></div>
+                <div class="column"><img src="images/gallery2.jpg" alt="Gallery Image 2"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Namjodi-abc Secondary School | Designed with ❤️ by Mnzathu | 📍 Thyolo, Malawi | 📞 +265 993 816 460 | ✉ namjodiabcshed@gmail.com</p>
+    <p>
+        <a href="https://wa.me/265888954444" target="_blank">WhatsApp</a> |
+        <a href="https://facebook.com/namjodiabcschool" target="_blank">Facebook</a> |
+        <a href="mailto:namjodiabcshed@gmail.com">Email</a>
+    </p>
+</footer>
+
+</body>
+</html>

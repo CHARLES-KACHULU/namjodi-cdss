@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namjodi-abc Secondary School - Home</title>
+<style>
+/* ===== Global Styles ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+}
+.page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    width: 95%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+#sidebar {
+    width: 180px;
+    background: indigo;
+    color: white;
+    padding: 15px 8px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-550px);
+    height: 100vh;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+    overflow-y: auto;
+}
+#sidebar img.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+}
+#sidebar h2 { font-size: 1rem; margin: 5px 0; }
+#sidebar p.motto { font-size: 0.8rem; font-style: italic; margin-bottom: 10px; color: #ddd; }
+
+/* Sidebar list with minimal spacing */
+#sidebar ul { list-style: none; padding: 0; margin: 0; }
+#sidebar ul li { margin: 2px 0; } /* very tight spacing */
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 2px 6px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.85rem;
+}
+#sidebar ul li a:hover { background: #444; }
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 200px;
+}
+
+/* School Title */
+.school-title {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #4B0082, #6A5ACD, #9370DB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.school-title::after {
+    content: "🏫";
+    display: block;
+    font-size: 1.5rem;
+    margin: 5px auto 0 auto;
+}
+
+/* Section Styling */
+.section {
+    background: #f0f8ff; 
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    border-left: 6px solid #6A5ACD; 
+}
+.section h3 { color: #4B0082; margin-bottom: 10px; }
+.section p { color: #333; line-height: 1.6; }
+.section img { width: 100%; max-width: 500px; border-radius: 12px; display: block; margin: 15px auto; }
+.stories { display: flex; flex-wrap: wrap; gap: 15px; }
+.story { flex: 1 1 45%; background: #fff; padding: 10px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.story img { max-width: 100%; border-radius: 8px; margin-bottom: 8px; }
+
+/* View Results Button */
+.view-results-btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 15px 0;
+    background-color: indigo;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+.view-results-btn:hover { background-color: #4B0082; }
+
+/* Footer */
+footer {
+    background: cadetBlue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1100px;
+    border-radius: 0 0 12px 12px;
+}
+footer p { margin: 4px 0; }
+footer a { color: yellow; text-decoration: none; font-weight: bold; }
+
+/* Responsive */
+@media(max-width: 900px){
+    #sidebar {
+        position: relative;
+        transform: none;
+        width: 100%;
+        height: auto;
+        border-radius: 12px 12px 0 0;
+    }
+    .main-content { margin-left: 0; }
+    .stories { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <img src="images/school-logo.png" alt="School Logo" class="logo">
+        <h2>Namjodi-abc</h2>
+        <p class="motto">"Excellence Through Knowledge and Character"</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="students.html">Student Life</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="school-title">Namjodi-abc Secondary School</h1>
+
+        <div class="section">
+            <h3>Principal's Welcome</h3>
+            <p>Namjodi-abc Secondary School is a government institution committed to academic excellence and holistic development. 
+               Our mission is to nurture responsible citizens equipped with knowledge, skills, and values to thrive in a competitive world.</p>
+            <p>Students engage in co-curricular and extracurricular activities that foster leadership, creativity, teamwork, and critical thinking.</p>
+            <img src="images/school-building.jpg" alt="School Building">
+        </div>
+
+        <div class="section">
+            <h3>School Highlights & Stories</h3>
+            <div class="stories">
+                <div class="story">
+                    <img src="images/governor-school-visit.jpg" alt="Visitors from Scotland">
+                    <h4>Visitors from Govan School, Scotland</h4>
+                    <p>They donated stationeries and supported some students by paying fees.</p>
+                </div>
+                <div class="story">
+                    <img src="images/school-trip.jpg" alt="School Trip">
+                    <h4>Educational Trips</h4>
+                    <p>Our students and teachers travel for educational tours and cultural exchanges to broaden learning experiences.</p>
+                </div>
+                <div class="story">
+                    <img src="images/sports-event.jpg" alt="Sports & Activities">
+                    <h4>Sports & Co-Curricular Activities</h4>
+                    <p>Students participate in sports, debates, arts, and music competitions, fostering teamwork and creativity.</p>
+                </div>
+                <div class="story">
+                    <img src="images/community-service.jpg" alt="Community Service">
+                    <h4>Community Service</h4>
+                    <p>Namjodi-abc encourages students to engage in community service, promoting values of compassion and leadership.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- View Results Button -->
+        <a href="results.html" class="view-results-btn">View Your Results</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Namjodi-abc Secondary School | Designed with ❤️ by Mnzathu | 📍 Thyolo, Malawi | 📞 +265 993 816 460 | ✉ namjodiabcshed@gmail.com</p>
+    <p>
+        <a href="https://wa.me/265888954444" target="_blank">WhatsApp</a> |
+        <a href="https://facebook.com/namjodiabcschool" target="_blank">Facebook</a> |
+        <a href="mailto:namjodiabcshed@gmail.com">Email</a>
+    </p>
+</footer>
+
+</body>
+</html>
